@@ -1,0 +1,33 @@
+<div *ngIf="tache">
+    <h2> Détail de la tâche {{ tache.id }} : </h2>
+    <table class="table">
+        <tr>
+            <!-- <th> ID tâche </th> -->
+            <th> Titre tâche </th>
+            <th> Résumé tâche </th>
+            <th> Contenu tâche </th>
+            <th> Statut tâche </th>
+        </tr>
+
+        <tr>
+            <!-- <td> {{ tache.id }} </td> -->
+            <td> {{ tache.titre }} </td>
+            <td> {{ tache.resume }} </td>
+            <td> {{ tache.contenu }} </td>
+            <td> {{ tache.done }} </td>
+            <!-- <td> 
+                <input type="checkbox" name="done" id="done" value="done"> 
+                <label for="done"> Done </label>
+            </td> -->
+        </tr>
+    </table>
+
+</div>
+
+<div class="box">
+    <div> <button routerLink="/nouvelleTache"> Ajouter une nouvelle tâche à la todo list </button> </div>
+    <div> <button routerLink="/taches"> Retour à la liste des tâches </button> </div>
+    <div> <button routerLink=""> Retour à la page d'accueil </button> </div>
+</div>
+
+

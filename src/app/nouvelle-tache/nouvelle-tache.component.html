@@ -1,0 +1,36 @@
+<h2> Ajouter une nouvelle tâche à la todo list </h2>
+
+<form (ngSubmit)="ajouterNouvelleTache()">
+    <!-- ID (auto-incrémentation) de la nouvelle tâche -->
+    <div>
+        <label for="id"> ID de la tâche : {{ nouvelleTache.id }} </label>
+    </div>
+
+    <!-- Titre de la nouvelle tâche -->
+    <div>
+        <label for="titre"> Titre de la tâche : </label>
+        <input type="text" name="titre" [(ngModel)]="nouvelleTache.titre">
+    </div>
+
+    <!-- Résumé de la nouvelle tâche -->
+    <div>
+        <label for="resume"> Résumé de la tâche : </label>
+        <input type="text" name="resume" [(ngModel)]="nouvelleTache.resume">
+    </div>
+
+    <!-- Contenu de la nouvelle tâche -->
+    <div>
+        <label for="contenu"> Contenu de la tâche </label>
+        <textarea name="" id="" cols="20" rows="5" [(ngModel)]="nouvelleTache.contenu"></textarea>
+    </div>
+
+    <!-- Statut de la nouvelle tâche -->
+    <div> Done: {{ nouvelleTache.done }} </div>
+
+    <button type="submit"> Créer la nouvelle tâche </button>
+</form>
+
+<div class="box">
+    <div> <button routerLink="/taches"> Retour à la liste des tâches </button> </div>
+    <div> <button routerLink=""> Retour à la page d'accueil </button> </div>
+</div>
